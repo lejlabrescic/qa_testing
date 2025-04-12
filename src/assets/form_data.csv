@@ -1,0 +1,4 @@
+purchase_channel,name,email,order_number,phone,serial_number,product_url
+Amazon,Keks,keks@gmail.com,123456,61123456,SN-987654,https://product-url.com
+Ebay,John,john@example.com,789101,61234567,SN-987655,https://product2-url.com
+Walmart,Alice,alice@walmart.com,112233,61345678,SN-987656,https://product3-url.com

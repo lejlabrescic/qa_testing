@@ -7,6 +7,8 @@ import io.github.cdimascio.dotenv.Dotenv;
 import pages.ContactPage;
 import pages.LoginPage;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class ContactFormTest {
     WebDriver driver;
     Dotenv dotenv = Dotenv.configure().directory("src").load();
@@ -23,22 +25,30 @@ public class ContactFormTest {
     }
 
     @Test
-    public void testContactFormSubmission() {
+    public void testContactFormSubmission() throws InterruptedException {
         ContactPage contactPage = new ContactPage(driver);
         contactPage.navigateToContactForm();
 
         contactPage.fillContactForm(
-                "Amazon",               // Purchase Channel
-                "Keks",                   // Name
-                "keks@gmail.com",           // Email
-                "123456",                     // Order Number
-                "61123456",                   // Phone
-                "SN-987654",                  // Serial Number
-                "https://product-url.com"     // Product URL
+                "Amazon",
+                "Keks",
+                "keks@gmail.com",
+                "123456",
+                "61123456",
+                "SN-987654",
+                "https://product-url.com"
         );
 
         contactPage.uploadDocument("../../assets/test.jpg");
         contactPage.submitForm();
+        Thread.sleep(5000); //added for 
+        String successText = contactPage.verifySuccessText();
+        assertEquals( "Thanks for getting in touch!", successText);
+
+    }
+
+    @Test
+    public void testContactFormSubmissionFromCSV() {
 
     }
 

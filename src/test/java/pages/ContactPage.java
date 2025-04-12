@@ -20,7 +20,7 @@ public class ContactPage {
     By uploadFileInput = By.xpath("//*[@id=\"globo-formbuilder-81469\"]/div/div/div/form/div[2]/div/div[1]/div/div[7]/div/div/div/div[1]/button");
     By productUrlField = By.xpath("//*[@id=\"0-url-1\"]");
     By submitButton = By.xpath("//*[@id=\"globo-formbuilder-81469\"]/div/div/div/form/div[2]/div/div[4]/button[2]");
-
+    By successTextElement = By.xpath("//*[@id=\"globo-formbuilder-81469\"]/div/div/div/form/div[2]/div/div[3]/div[1]");
     public ContactPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -46,5 +46,9 @@ public class ContactPage {
 
     public void submitForm() {
         driver.findElement(submitButton).click();
+    }
+    public String verifySuccessText() {
+
+        return driver.findElement(successTextElement).getText();
     }
 }
