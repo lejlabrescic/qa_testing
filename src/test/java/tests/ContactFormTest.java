@@ -10,7 +10,6 @@ import io.github.cdimascio.dotenv.Dotenv;
 import pages.ContactPage;
 import pages.LoginPage;
 
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,7 +20,6 @@ public class ContactFormTest {
     String password = dotenv.get("PASSWORD");
     String jpgPath = dotenv.get("JPG_PATH");
     String gifPath = dotenv.get("GIF_PATH");
-    String  csvPath = dotenv.get("CSV_PATH");
 
     @BeforeEach
     public void setUp() {
@@ -89,5 +87,7 @@ public class ContactFormTest {
             driver.quit();
         }
     }
+
+
 }
 

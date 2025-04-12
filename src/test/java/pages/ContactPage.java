@@ -17,10 +17,7 @@ public class ContactPage {
     WebDriver driver;
 
 
-    // Contact link on homepage
     By contactLink = By.xpath("//*[@id=\"shopify-section-sections--16750295384234__header\"]/sticky-header/header/nav/ul/li[3]/a");
-
-    // Form elements
     By purchaseChannel = By.tagName("select");
     By nameField = By.xpath("//*[@id=\"0-name-1\"]");
     By emailField = By.xpath("//*[@id=\"0-email-1\"]");
@@ -41,7 +38,7 @@ public class ContactPage {
         driver.findElement(contactLink).click();
     }
     public void fillContactForm(String channel, String name, String email, String orderNumber,
-                                String phone, String serialNumber, String productUrl) {
+                         String phone, String serialNumber, String productUrl) {
         new Select(driver.findElement(purchaseChannel)).selectByVisibleText(channel);
         driver.findElement(nameField).sendKeys(name);
         driver.findElement(emailField).sendKeys(email);
@@ -51,7 +48,8 @@ public class ContactPage {
         driver.findElement(productUrlField).sendKeys(productUrl);
     }
 
-    public void uploadDocument(String filePath) {
+    public
+    void uploadDocument(String filePath) {
 
         WebElement uploadElement = driver.findElement(uploadFileInput);
 
@@ -61,7 +59,8 @@ public class ContactPage {
         uploadElement.sendKeys(filePath);
     }
 
-    public void submitForm() {
+    public
+    void submitForm() {
         driver.findElement(submitButton).click();
     }
 

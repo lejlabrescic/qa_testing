@@ -1,4 +1,0 @@
-purchase_channel,name,email,order_number,phone,serial_number,product_url
-Amazon,Keks,keks@gmail.com,123456,61123456,SN-987654,https://product-url.com
-Social Media,Lejla,lejla@sm.com,789101,61234567,SN-56789,https://product2-url.com
-Official Website,Lejla,lejla@ow.com,711101,12345,SN-1234,https://product3-url.com
