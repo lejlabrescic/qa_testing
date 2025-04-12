@@ -34,7 +34,7 @@ Make sure the following are installed on your system:
 ```bash
   git clone https://github.com/lejlabrescic/qa_testing
 ```
-#### 3. Open folder in the environment 
+#### 3. Open project folder in the environment 
 
 #### 4. Setting up the environment variables 
 To run this project, you will need to add the following environment variables to your .env file (project structure shown below): 
