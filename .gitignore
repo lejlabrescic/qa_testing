@@ -39,4 +39,4 @@ build/
 
 #### Environment Variables ####
 
-./src/.env
+src/.env
