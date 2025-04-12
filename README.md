@@ -3,7 +3,7 @@
 
 
 # 🔗 Contact Form Automation Testing (Shopify Application)
-Contact form on [the following platform](https://qa-test-pc.myshopify.com/pages) is being tested. This project automates the testing of a web application's contact form. The tests cover both expected user behavior (positive scenario) and edge cases (negative scenario). The primary goal is to make sure that user interactions with the form work correctly, and to detect any discrepancies between expected and actual system behavior.
+This project automates the testing of a web application's contact form on [the following platform](https://qa-test-pc.myshopify.com/pages). The tests cover both expected user behavior (positive scenario) and edge cases (negative scenario). The primary goal is to make sure that user interactions with the form work correctly, and to detect any discrepancies between expected and actual system behavior.
 
 The automation is built using **Selenium WebDriver and Java**. Tests are structured using the **Page Object Model (POM)** for better readability and maintainability. **JUnit** is used as the test framework, and Maven handles project builds and dependency management. Environment variables are managed through the use of the **dotenv-java** library to allow for secure test environments.
 
